@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MUPDefinition xsi:schemaLocation="http://schemas.dell.com/openmanage/cm/2/0/mupdefinition.xsd mupdefinition.xsd" xmlns="http://schemas.dell.com/openmanage/cm/2/0/mupdefinition.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<packageinformation>
+		<installertype>custom</installertype>
+		<packagegrouping>single_package</packagegrouping>
+		<packagingtype>zip</packagingtype>
+		<releasetype>APP</releasetype>
+		<name>WAVESUWP</name>
+		<version>1.1.67.0</version>
+		<mupspecificationversion>2.4.3</mupspecificationversion>
+		<supportedoperatingsystems>
+			<osidentifier name="Windows10" architecture="x64" />
+		</supportedoperatingsystems>
+		<content>
+			<Device componentID="106430">
+				<Image type="APP" version="1.0.0">
+					<file>OpenDeepLink.bat</file>
+				</Image>
+			</Device>
+		</content>
+	</packageinformation>
+	<executable architecture="x64">
+		<executablename>OpenDeepLink.bat</executablename>
+	</executable>	
+	<behaviors>
+		<behavior name="attended"/>
+		<behavior name="unattended"/>
+		<behavior name="freshinstall"/>
+	</behaviors>
+	<parameters>
+		<parametermapping name="logfile"/>
+	</parameters>
+		<returncodes>
+		<returncodemapping name="SUCCESS">
+			<vendorreturncode>0</vendorreturncode>
+		</returncodemapping>
+		<returncodemapping name="ERROR">
+			<vendorreturncode>1</vendorreturncode>
+		</returncodemapping>
+		<returncodemapping name="REBOOT_REQUIRED">
+			<vendorreturncode>5</vendorreturncode>
+		</returncodemapping>
+	</returncodes>
+	
+	<inventorymetadata>
+		<fullpackageidentifier>
+			<registrykeys>
+				<registrykey componentID="106430">
+					<name>HKEY_LOCAL_MACHINE\SOFTWARE\Dell\WavesUWP\Product_Version</name>
+					<value>1.1.67.0</value>
+					<displayName>HKEY_LOCAL_MACHINE\SOFTWARE\Dell\WavesUWP\Product_Name</displayName>
+					<displayValue>Dell Waves UWP</displayValue>
+				</registrykey>
+			</registrykeys>
+		</fullpackageidentifier>
+	</inventorymetadata>
+</MUPDefinition>
